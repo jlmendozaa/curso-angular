@@ -1,8 +1,16 @@
-<h1>Contador: </h1>
+
+<!--<h1>Contador: </h1>
 <p>{{valorContador}}</p>
 
 <button (click)="incrementar()" >Incrementar</button>
 <button (click)="decrementar()">Decrementar</button>
+-->
 
+<h5>El mensaje recibidio desde el hijo es: {{mensajeRecibido}}</h5>
 
-<app-hijo [recibeHijo]="mensajePadre"></app-hijo> 
+<h1>Contador: </h1>
+<p>{{valorContador}}</p>
+
+<app-hijo (mensajeDesdeHijo)="recibirMensaje($event)"
+(incrementarDesdeHijo)="incrementar()"
+(decrementarDesdeHijo)="decrementar()"></app-hijo> 

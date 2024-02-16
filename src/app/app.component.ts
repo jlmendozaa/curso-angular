@@ -9,5 +9,4 @@ export class AppComponent {
   title = 'curso-angular';
   subtitle = 'aprender a aprender';
   subsubtitle = 'esto que es';
-  subsubtitle2 = 'esto que es';
 }

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ServicioFamiliarService } from '../servicio-familiar.service';
 
 @Component({
   selector: 'app-hijo',
@@ -6,6 +7,9 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./hijo.component.css']
 })
 export class HijoComponent {
+
+  constructor(private _servicioFamiliar : ServicioFamiliarService
+  ){}
 
   @Output() mensajeDesdeHijo =  new EventEmitter<string>();
   @Output() decrementarDesdeHijo =  new EventEmitter<void>();
@@ -15,6 +19,10 @@ export class HijoComponent {
 
   enviarMensaje(){
     this.mensajeDesdeHijo.emit(this.mensaje);
+  }
+
+  preguntar(){
+   console.log(this._servicioFamiliar.preguntarPorHijo());
   }
 
   incrementar(){

@@ -16,4 +16,6 @@ export class PadreComponent {
     this.valorContador--;
   }
 
+  mensajePadre = 'Mensaje del padre';
+
 }

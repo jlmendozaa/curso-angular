@@ -11,6 +11,7 @@ export class PadreComponent implements OnInit {
   
 
   nombre?: string;
+  fecha?: Date = new Date();
 
   constructor(private _servicioFamiliar: ServicioFamiliarService
   ) { }

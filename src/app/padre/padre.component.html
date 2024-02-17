@@ -1,3 +1,5 @@
-<h1>{{nombre}}</h1>
+<h1>{{nombre | miPipePersonalizado}}</h1>
+<h1>{{nombre | lowercase}}</h1>
+<h2>Fecha de hoy es  {{fecha | date:'dd/MM/YYYY'}}</h2>
 <button type="button" (click)="saludar()">Saludar</button>
 <button type="button" (click)="preguntar()">Preguntar Hijo</button>
